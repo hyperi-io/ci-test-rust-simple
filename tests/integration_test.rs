@@ -32,7 +32,13 @@ fn test_version_flag() {
 
     assert!(output.status.success());
     let stdout = String::from_utf8_lossy(&output.stdout);
-    assert!(stdout.contains("ci-test-rust-simple 0.0.1"));
+    let expected = format!("ci-test-rust-simple {}", env!("CARGO_PKG_VERSION"));
+    assert!(
+        stdout.contains(&expected),
+        "expected version string '{}' in output: {}",
+        expected,
+        stdout
+    );
 }
 
 #[test]
