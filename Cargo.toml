@@ -1,0 +1,12 @@
+# Project:      ci-test-rust-simple
+# File:         Cargo.toml
+# Purpose:      Package manifest for minimal Rust CLI test project
+# License:      FSL-1.1-ALv2
+# Copyright:    (c) 2026 HYPERI PTY LIMITED
+
+[package]
+name = "ci-test-rust-simple"
+version = "0.0.1"
+edition = "2021"
+description = "Minimal Rust CLI for testing HyperI CI pipelines"
+license = "FSL-1.1-ALv2"
