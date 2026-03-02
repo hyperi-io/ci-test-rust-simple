@@ -6,7 +6,7 @@
 
 [package]
 name = "ci-test-rust-simple"
-version = "1.0.1"
+version = "1.0.2"
 edition = "2021"
 description = "Minimal Rust CLI for testing HyperI CI pipelines"
 license = "FSL-1.1-ALv2"

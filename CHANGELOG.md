@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/hyperi-io/ci-test-rust-simple/compare/v1.0.1...v1.0.2) (2026-03-02)
+
+
+### Bug Fixes
+
+* use dynamic version check in integration test ([fe45972](https://github.com/hyperi-io/ci-test-rust-simple/commit/fe45972f08bfa4c51945b148af0bfa6589af66f9))
+
 ## [1.0.1](https://github.com/hyperi-io/ci-test-rust-simple/compare/v1.0.0...v1.0.1) (2026-03-02)
 
 
