@@ -16,9 +16,7 @@ fn cargo_bin() -> Command {
 
 #[test]
 fn test_default_output() {
-    let output = cargo_bin()
-        .output()
-        .expect("failed to execute binary");
+    let output = cargo_bin().output().expect("failed to execute binary");
 
     assert!(output.status.success());
     let stdout = String::from_utf8_lossy(&output.stdout);
