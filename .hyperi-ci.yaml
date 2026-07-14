@@ -5,12 +5,12 @@
 # Copyright:    (c) 2026 HYPERI PTY LIMITED
 #
 # HyperI CI Configuration
-# Documentation: https://github.com/hyperi-io/ci/blob/main/docs/CONFIGURATION.md
+# Documentation: https://github.com/hyperi-io/hyperi-ci/blob/main/docs/README.md
 #
 # Configuration precedence (highest wins):
 #   1. Environment variables (HYPERCI_*)
 #   2. This file (.hyperi-ci.yaml)
-#   3. ci/defaults.yaml (CI defaults)
+#   3. config/defaults.yaml (hyperi-ci defaults)
 
 # Project language
 language: rust
