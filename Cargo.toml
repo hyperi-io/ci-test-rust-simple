@@ -8,5 +8,5 @@
 name = "ci-test-rust-simple"
 version = "1.0.2"
 edition = "2021"
-description = "Minimal Rust CLI for testing HyperI CI pipelines"
+description = "hyperi-ci E2E fixture: minimal Rust CLI, the baseline pipeline"
 license = "FSL-1.1-ALv2"
