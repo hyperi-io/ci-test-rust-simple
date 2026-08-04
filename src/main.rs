@@ -6,6 +6,8 @@
 //! License:      FSL-1.1-ALv2
 //! Copyright:    (c) 2026 HYPERI PTY LIMITED
 
+// Verifying hyperi-ci#91: a renovate/ branch must plan onto a runner with
+// cargo. Revert once the run is read.
 const NAME: &str = env!("CARGO_PKG_NAME");
 const VERSION: &str = env!("CARGO_PKG_VERSION");
 
