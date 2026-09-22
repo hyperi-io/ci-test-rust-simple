@@ -40,9 +40,17 @@ cargo audit        # must exit 1
 cargo deny check   # must exit 1
 ```
 
-The commit on the branch has to be a release-worthy type (`fix:`).
-hyperi-ci skips the quality job entirely for non-bumping commits, so a
-`chore:` commit sails through green having run no gate at all.
+Two things the run depends on, both easy to get wrong:
+
+- The branch commit has to be a release-worthy type (`fix:`), AND the
+  run has to be a `pull_request` one. hyperi-ci skips the quality job
+  for non-bumping commits, and its plan job skips it for a push to a
+  non-main branch - a bare branch push goes green in about 25 seconds
+  having run no gate at all. Measured on this fixture: the push run
+  reported `run-checks=false` and skipped Quality; the PR run reported
+  `run-checks=true` and ran it.
+- `cargo deny` needs `deny.toml` on main. Delete it and the deny half
+  of the case goes silently unchecked while the run still looks fine.
 
 ## Cases
 
