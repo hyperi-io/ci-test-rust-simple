@@ -6,11 +6,22 @@
 //! License:      FSL-1.1-ALv2
 //! Copyright:    (c) 2026 HYPERI PTY LIMITED
 
+// DO NOT FIX - see the DO NOT FIX block in Cargo.toml. The vulnerable
+// smallvec is used here so it is a real dependency of a real code path,
+// not dead weight an unused-dependency check could flag at a different
+// stage than the advisory gate this case is asserting.
+use smallvec::SmallVec;
+
 const NAME: &str = env!("CARGO_PKG_NAME");
 const VERSION: &str = env!("CARGO_PKG_VERSION");
 
+/// Collect the CLI arguments without heap-allocating the common short case.
+fn collect_args() -> SmallVec<[String; 4]> {
+    std::env::args().collect()
+}
+
 fn main() {
-    let args: Vec<String> = std::env::args().collect();
+    let args = collect_args();
 
     if args.len() > 1 {
         match args[1].as_str() {
