@@ -29,6 +29,11 @@ name: CI
         required: false
         default: "auto"
         description: "Version resolution for from-head: auto | patch | minor (forced) | X.Y.Z (exact version)."
+      runner-build:
+        type: string
+        required: false
+        default: ""
+        description: "amd64 build runner. The ci-test fleet defaults to the canary scale set; name the production one here to tell a canary-image break from a hyperi-ci break."
 
 permissions:
   contents: write
@@ -44,4 +49,5 @@ jobs:
       tag: ${{ inputs.tag || '' }}
       from-head: ${{ inputs.from-head || '' }}
       bump: ${{ inputs.bump || 'auto' }}
+      runner-build: ${{ inputs.runner-build || '' }}
     secrets: inherit
