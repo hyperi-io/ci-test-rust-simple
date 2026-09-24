@@ -37,7 +37,7 @@ publish:
   # NO PUBLIC REGISTRY UPLOAD. Every ci-test fixture carries this.
   #
   # `enabled: false` used to be the whole block here and it did NOTHING --
-  # hyperi-ci never reads that key (hyperi-io/hyperi-ci#79). This crate was
+  # hyperi-ci did not read that key then (hyperi-io/hyperi-ci#79). This crate was
   # only ever safe by accident, because it builds a binary and the Rust
   # publish handler short-circuits crate publish for binary apps. Change
   # src/main.rs to src/lib.rs and it would have gone to crates.io, which is
@@ -46,6 +46,5 @@ publish:
   # A falsy destination is the opt-out that works. Everything up to the upload
   # still runs and is still under test.
   enabled: true
-  target: oss
-  destinations_oss:
+  destinations:
     cargo: false
