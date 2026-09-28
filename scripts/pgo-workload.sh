@@ -2,7 +2,7 @@
 # Project:      ci-test-rust-simple
 # File:         scripts/pgo-workload.sh
 # Purpose:      PGO/BOLT profiling workload for the hyperi-ci Tier 2 pipeline
-# License:      FSL-1.1-ALv2
+# License:      BUSL-1.1
 # Copyright:    (c) 2026 HYPERI PTY LIMITED
 #
 # hyperi-ci runs this twice per target -- once against the PGO-instrumented
