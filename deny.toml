@@ -1,7 +1,7 @@
 # Project:      ci-test-rust-simple
 # File:         deny.toml
 # Purpose:      cargo-deny policy so hyperi-ci's `deny` gate actually runs
-# License:      FSL-1.1-ALv2
+# License:      BUSL-1.1
 # Copyright:    (c) 2026 HYPERI PTY LIMITED
 #
 # hyperi-ci skips `cargo deny` when a project has no deny.toml
@@ -28,7 +28,7 @@ ignore = []
 # crate's own licence - cargo deny checks the root package too, and
 # omitting it fails the check before any dependency is looked at.
 allow = [
-    "FSL-1.1-ALv2",
+    "BUSL-1.1",
     "MIT",
     "Apache-2.0",
     "Apache-2.0 WITH LLVM-exception",
