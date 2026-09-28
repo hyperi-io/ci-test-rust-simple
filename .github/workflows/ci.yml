@@ -34,6 +34,11 @@ name: CI
         required: false
         default: ""
         description: "amd64 build runner. The ci-test fleet defaults to the canary scale set; name the production one here to tell a canary-image break from a hyperi-ci break."
+      optimize-tier:
+        type: string
+        required: false
+        default: ""
+        description: "'release' to build the release optimisation tier on a run that publishes nothing (Rust: PGO + BOLT)."
 
 permissions:
   contents: write
@@ -50,4 +55,5 @@ jobs:
       from-head: ${{ inputs.from-head || '' }}
       bump: ${{ inputs.bump || 'auto' }}
       runner-build: ${{ inputs.runner-build || '' }}
+      optimize-tier: ${{ inputs.optimize-tier || '' }}
     secrets: inherit
