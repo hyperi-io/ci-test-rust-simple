@@ -33,7 +33,7 @@ build:
     - native
 
 # Publishing (on release)
-publish:
+release:
   # NO PUBLIC REGISTRY UPLOAD. Every ci-test fixture carries this.
   #
   # `enabled: false` used to be the whole block here and it did NOTHING --
