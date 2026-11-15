@@ -29,6 +29,11 @@ name: CI
         required: false
         default: "auto"
         description: "Version resolution for from-head: auto | patch | minor (forced) | X.Y.Z (exact version)."
+      runner-mode:
+        type: string
+        required: false
+        default: ""
+        description: "self-hosted runs on the ARC runners. Empty runs on free GitHub runners."
       runner-build:
         type: string
         required: false
@@ -54,6 +59,7 @@ jobs:
       tag: ${{ inputs.tag || '' }}
       from-head: ${{ inputs.from-head || '' }}
       bump: ${{ inputs.bump || 'auto' }}
+      runner-mode: ${{ inputs.runner-mode || '' }}
       runner-build: ${{ inputs.runner-build || '' }}
       optimize-tier: ${{ inputs.optimize-tier || '' }}
     secrets: inherit
